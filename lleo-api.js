@@ -19,7 +19,12 @@ class LinguaLeo {
     }
 
     auth(callback) {
-        this._session.get(`${LinguaLeo.apiParams.host}${LinguaLeo.apiParams.auth}?${querystring.stringify({'email': this._email, 'password': this._password, 'type': 'login'})}`, {},
+        let authParams = querystring.stringify({
+                'email': this._email, 
+                'password': this._password, 
+                'type': 'login'});
+
+        this._session.get(`${LinguaLeo.apiParams.host}${LinguaLeo.apiParams.auth}?${authParams}`, {},
             (err) => {
                 if(err) this._errorHandler(err, true);
                 this.checkAuth(callback);
