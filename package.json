@@ -1,0 +1,12 @@
+{
+  "name": "lleo-sub",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "rewnd",
+  "license": "MIT",
+  "dependencies": {
+    "bhttp": "^1.2.4",
+    "copy-paste": "github:rewnd/node-copy-paste#master",
+    "node-notifier": "^5.1.2"
+  }
+}
