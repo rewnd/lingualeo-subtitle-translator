@@ -14,7 +14,7 @@ let noDict = process.argv.some((elem) => {
     });
 
 if(noDict) {
-    console.log('Флаг --nodict установлен, только показ переводов без добавления в словарь');
+    console.log('Установлен параметр --nodict, только показ переводов без добавления в словарь');
 }
 
 //clipboard

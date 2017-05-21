@@ -37,11 +37,11 @@ class LinguaLeo {
                 if(err) this._errorHandler(err, true);
 
                 if(resp.body.is_authorized) {
-                    console.log('Succesfully authorized');
-                    console.log('Press Ctrl+C to quit'); //TODO: this message always must be on the last position in a console 
+                    console.log('Успешная авторизация в lingualeo');
+                    console.log('Нажмите Ctrl+C для выхода'); 
                     callback();
                 } else {
-                    console.error('Authorization failed. Please check your e-mail and password.');
+                    console.error('Ошибка авторизации, пожалуйста, проверьте e-mail и пароль в файле auth-config.js');
                     process.exit(0);
                 }
         });
