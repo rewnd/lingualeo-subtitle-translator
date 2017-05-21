@@ -13,6 +13,10 @@ let noDict = process.argv.some((elem) => {
         return elem === '--nodict';
     });
 
+if(noDict) {
+    console.log('Флаг --nodict установлен, только показ переводов без добавления в словарь');
+}
+
 //clipboard
 let clipboard = "";
 copypaste.copy(clipboard);
@@ -43,7 +47,7 @@ function displayTranslations (respJson) {
 
     let notification = {
         title: `${clipboard} [${checkDict(respJson, noDict)}]`,
-        message: getTranslationsList(respJson);
+        message: getTranslationsList(respJson)
     };
 
     displayNotification(notification);
