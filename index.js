@@ -68,7 +68,7 @@ function getTranslationsList(respJson) {
     let translationsList = '';
 
     translations.forEach((elem) => {
-        translationsList += '- ' + e.value + '\n';
+        translationsList += '- ' + elem.value + '\n';
     });
 
     return translationsList;
