@@ -41,7 +41,7 @@ function displayTranslations (respJson) {
     let translationError = checkTranslations(respJson);
 
     if (translationError) {
-        displayNotification(isTranslationError);
+        displayNotification(TranslationError);
         return false;
     }
 
